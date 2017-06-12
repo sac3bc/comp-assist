@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Scorecard Checker</title>
+    </head>
+    <body>
+        <form action="/checkresults" method="POST">
+        <h1>Confirm Scorecard Times</h1>
+           <p>Name: </p><input type="text" name="comp_name"><br>
+            <br>
+            <p>Times</p>
+            <input type="text" name="time_1"><br>
+            <input type="text" name="time_2"><br>
+            <input type="text" name="time_3"><br>
+            <input type="text" name="time_4"><br>
+            <input type="text" name="time_5"><br> 
+            <input type="submit" value="Submit">
+        </form>
+
+
+        <p>Name: {{comp_name}}</p>
+
+        <p>Time 1: {{time_1}}</p>
+        <p>Time 2: {{time_2}}</p>
+        <p>Time 3: {{time_3}}</p>
+        <p>Time 4: {{time_4}}</p>
+        <p>Time 5: {{time_5}}</p>
+       
+
+
+            
+    </body>
+
+</html>

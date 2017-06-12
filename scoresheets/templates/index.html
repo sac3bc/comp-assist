@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}"> 
+		<title>All Events</title>
+	</head>
+
+	<body>
+		<ul id="navigation">
+	    {% for event in events %}
+	        <li><a href="{{ url_for('show_event', id=event.id) }}">{{ event.name }}</a></li>
+	    {% endfor %}
+	    </ul>
+
+		
+
+	</body>
+</html>
+
+
