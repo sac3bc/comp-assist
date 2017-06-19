@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+   <body>
+
+
+
+        <h1>Competition Homepage</h1>
+        <hr/>
+
+        <h3>
+      
+        </h3>
+
+      <hr/>
+        {%- for message in get_flashed_messages() %}
+            {{ message }}
+        {%- endfor %}
+
+
+        <h3> <a href = "{{ url_for('new_event') }}">Add Event 
+            </a></h3>
+
+
+
+      <table>
+         <thead>
+            <tr>
+               <th>Event Name</th>
+            </tr>
+         </thead>
+         
+         <tbody>
+            {% for event in events %}
+               <tr>
+                  <td><a href= "{{url_for('show_event', id=event.id)}}"> {{ event.name }}</td>
+               </tr>
+            {% endfor %}
+         </tbody>
+      </table>
+
+
+     
+   </body>
+</html>

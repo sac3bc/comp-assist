@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang = "en">
+   <head></head>
+   <body>
+     <h1>{{event.name}} Round {{round.number}}</h1>
+
+      <h3> <a href = "{{ url_for('new_competitor', id=round.id) }}">Add Competitor
+            </a></h3>
+
+
+      <table>
+            <thead>
+                <tr>
+                    <th>Competitors: </th>
+                </tr>
+            </thead>
+         
+            <tbody>
+                {% for competitor in round.competitors %}
+                    <tr>
+                       <td>{{competitor.competitor_name}}</td>
+                    </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+
+   <body>
+</html> 

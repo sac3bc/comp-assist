@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang = "en">
+   <head></head>
+   <body>
+       <h1>{{event.name}}</h1>
+
+       <h3> <a href = "{{ url_for('new_round', id=event.id) }}">Add Round
+            </a></h3>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>Event Rounds: </th>
+                </tr>
+            </thead>
+         
+            <tbody>
+                {% for round in event.rounds %}
+                    <tr>
+                       <td><a href = "{{ url_for('show_round', id=event.id) }}">{{ round.number}}</td>
+                    </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+
+
+   <body>
+</html> 
+
